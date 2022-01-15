@@ -25,7 +25,7 @@ public class ProductService {
         return productRepository.findAll().stream()
                 .map(product -> {
                     return ProductDto.builder()
-                            .categoryName(product.getCategory().getGroupName())
+                            .categoryName(product.getCategory().getCategoryName())
                             .currentPrice(product.getCurrentPrice())
                             .name(product.getName())
                             .build();

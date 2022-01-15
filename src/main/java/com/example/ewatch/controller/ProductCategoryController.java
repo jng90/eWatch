@@ -1,6 +1,8 @@
 package com.example.ewatch.controller;
 
 import com.example.ewatch.model.ProductCategory;
+import com.example.ewatch.model.dto.CreateProductCategoryDto;
+import com.example.ewatch.model.dto.ProductCategoryDto;
 import com.example.ewatch.service.ProductCategoryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,12 +18,12 @@ public class ProductCategoryController {
     private final ProductCategoryService productCategoryService;
 
     @GetMapping("")
-    public List<ProductCategory> getAll(){
+    public List<ProductCategoryDto> getAll(){
         return productCategoryService.findAll();
     }
 
     @PostMapping("")
-    public void add(@RequestBody ProductCategory productCategory){
+    public void add(@RequestBody CreateProductCategoryDto productCategory){
         productCategoryService.add(productCategory);
     }
 }
