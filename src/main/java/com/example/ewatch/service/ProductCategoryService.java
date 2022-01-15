@@ -32,7 +32,7 @@ public class ProductCategoryService {
         log.info("Add: " + productCategory);
 
 //        ProductCategory productCategoryToCreate = new ProductCategory(null, productCategory.getCategoryName(), new HashSet<>());
-        ProductCategory productCategoryToCreate= ProductCategory.builder()
+        ProductCategory productCategoryToCreate = ProductCategory.builder()
                         .categoryName(productCategory.getCategoryName())
                         .build();
 

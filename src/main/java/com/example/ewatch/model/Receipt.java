@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.util.Set;
 
 @Data
+@Builder
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,12 +15,11 @@ public class Receipt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private LocalDateTime dateOfPurchase;
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    @OneToMany(mappedBy = "receipt ")
+    @OneToMany(mappedBy = "receipt")
     private Set<ReceiptEntry> entries;
 
     @ToString.Exclude

@@ -6,13 +6,13 @@ import javax.persistence.*;
 
 @Data
 @Entity
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReceiptEntry {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private int quantity;
     private double price;
 

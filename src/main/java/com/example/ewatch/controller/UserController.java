@@ -1,6 +1,7 @@
 package com.example.ewatch.controller;
 
 import com.example.ewatch.model.User;
+import com.example.ewatch.model.dto.CreateUserDto;
 import com.example.ewatch.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +16,7 @@ public class UserController {
 
 
     @PostMapping("")
-    public void add(@RequestBody User user){
+    public void add(@RequestBody CreateUserDto user){
         userService.add(user);
     }
 
